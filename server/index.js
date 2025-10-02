@@ -18,6 +18,8 @@ app.get('/api', (req, res) => {
 
 // Définir les routes
 app.use('/api/auth', require('./routes/authRoutes'));
+// Dans /server/index.js, ajoutez cette ligne sous vos autres routes :
+app.use('/api/users', require('./routes/userRoutes'));
 
 const PORT = process.env.PORT || 5000;
 
