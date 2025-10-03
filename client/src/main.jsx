@@ -3,12 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom'; // Importez BrowserRouter
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './context/AuthProvider.jsx'; // 1. Importer le provider
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter> {/* Enveloppez App ici */}
-      <App />
+    <BrowserRouter>
+      <AuthProvider> {/* 2. Envelopper l'application */}
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
