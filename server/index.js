@@ -20,6 +20,8 @@ app.get('/api', (req, res) => {
 app.use('/api/auth', require('./routes/authRoutes'));
 // Dans /server/index.js, ajoutez cette ligne sous vos autres routes :
 app.use('/api/users', require('./routes/userRoutes'));
+// Dans /server/index.js, ajoutez cette ligne sous vos autres routes :
+app.use('/api/quiz', require('./routes/quizRoutes'));
 
 const PORT = process.env.PORT || 5000;
 
